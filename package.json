@@ -1,8 +1,8 @@
 {
   "name": "skills-write-javascript-actions",
   "version": "1.0.0",
-  "description": "<img src=\"https://octodex.github.com/images/Professortocat_v2.png\" align=\"right\" height=\"200px\" />",
-  "main": "index.js",
+  "description": "GitHub Action for writing JavaScript actions - a learning exercise",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "ncc build src/main.js -o dist"
@@ -11,8 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/yowunpansilu/skills-write-javascript-actions.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "github-actions",
+    "javascript",
+    "learning"
+  ],
+  "author": "yowunpansilu",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
@@ -20,9 +24,8 @@
   },
   "homepage": "https://github.com/yowunpansilu/skills-write-javascript-actions#readme",
   "dependencies": {
-    "@actions/core": "^3.0.0",
+    "@actions/core": "^1.10.1",
     "@vercel/ncc": "^0.38.4",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.6"
+    "axios": "^1.6.0"
   }
 }

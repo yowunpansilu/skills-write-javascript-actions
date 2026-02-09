@@ -1,18 +1,13 @@
-const request = require("request-promise");
-
-const options = {
-    method: "GET",
-    uri: "https://icanhazdadjoke.com/",
-    headers: {
-        Accept: "application/json",
-        "User-Agent": "Writing JavaScript action GitHub Skills exercise.",
-    },
-    json: true,
-};
+const axios = require("axios");
 
 async function getJoke() {
-    const res = await request(options);
-    return res.joke;
+    const response = await axios.get("https://icanhazdadjoke.com/", {
+        headers: {
+            Accept: "application/json",
+            "User-Agent": "Writing JavaScript action GitHub Skills exercise.",
+        },
+    });
+    return response.data.joke;
 }
 
 module.exports = getJoke;
